@@ -32,7 +32,7 @@
         //var div = $(this).parent().clone();
         $.confirm({
         title: '',
-        content: 'url:http://' + $(location).attr('host') + '/Call',
+        content: 'url:https://' + $(location).attr('host') + '/Call',
         onContentReady: function () {
             var self = this;
             var input = this.$content.find('input#callto-id');
@@ -64,11 +64,11 @@
     });
 
     });
-alert($(location).attr('host'));
+    //alert($(location).attr('host'));
     //alert('http://' + $(location).attr('host') + ':8080/userinput.html'); 
     $.confirm({
         title: '',
-        content: 'url:http://' + $(location).attr('host') + '/UserInput',
+        content: 'url:https://' + $(location).attr('host') + '/UserInput',
         buttons: {
             userlogin: {
                 text: 'Login',
