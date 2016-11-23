@@ -1,1 +1,1 @@
-web: peerchat
+web: PeerChat
