@@ -1,33 +1,8 @@
-//Script file showing users list while mouse hover on the Online button
-
-$(document).ready(function() {
-
-    var panel = $('#userList');
-    var timeout;
-
-    $('.UserWidget').hover(
-        function() {
-            clearTimeout(timeout);
-            timeout = setTimeout(function() { panel.trigger('open'); }, 500);
-        },
-        function() {
-            clearTimeout(timeout);
-            timeout = setTimeout(function() { panel.trigger('close'); }, 500);
-        }
-    );
-
-    var loaded = false;
-
-    panel.bind('open', function() {
-        panel.slideDown(function() {
-            if (!loaded) {
-                executeQuery();     // It will fetch and load recent list on the div while hover on on the div
-                loaded = true;
-            }
-        });
-    }).bind('close', function() {
-        loaded = false;
-        panel.slideUp();
-    });
-
-});
+/***************************************************************************/
+/*                                                                         */
+/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
+/*  Javascript Obfuscator Free Version can be downloaded here              */
+/*  http://javascriptobfuscator.com                                        */
+/*                                                                         */
+/***************************************************************************/
+var _$_d13f=["#userList","open","trigger","close","hover",".UserWidget","slideUp","bind","slideDown","ready"];$(document)[_$_d13f[9]](function(){var b=$(_$_d13f[0]);var c;$(_$_d13f[5])[_$_d13f[4]](function(){clearTimeout(c);c= setTimeout(function(){b[_$_d13f[2]](_$_d13f[1])},500)},function(){clearTimeout(c);c= setTimeout(function(){b[_$_d13f[2]](_$_d13f[3])},500)});var a=false;b[_$_d13f[7]](_$_d13f[1],function(){b[_$_d13f[8]](function(){if(!a){executeQuery();a= true}})})[_$_d13f[7]](_$_d13f[3],function(){a= false;b[_$_d13f[6]]()})})

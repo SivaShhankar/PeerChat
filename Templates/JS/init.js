@@ -1,45 +1,8 @@
-var user; var peerID; var connectedPeers = {}; var peer, person;
-
-//var serverIP = '127.0.0.1', serverPort = '9000';
-var serverIP = 'rampeerjs.herokuapp.com', serverPort = '443';
-var serverHost = 'http://' + serverIP + ':' + serverPort + '/';   // Change server IP here
-
-function startPeerSession() {
-    if (person != null) {
-        // Local Host
-
-        peer = new Peer(person, {
-            host: serverIP, port: serverPort, secure: true, debug: 3,
-            // logFunction: function() {
-            //    var copy = Array.prototype.slice.call(arguments).join(' ');
-            //    $('.log').append(copy + '<br>');
-            //  }
-        });
-
-        // End
-
-
-        // Show this peer's ID.
-        peer.on('open', function (id) {
-            user = id; //$('#peerName').val();
-            peerID = id;
-            $('#pid').text(id);
-            //updateData();
-            //executeQuery();
-        });
-
-
-        // Await connections from others
-        peer.on('connection', connect);
-
-        peer.on('error', function (err) {
-            console.log(err);
-            displayInfo(err + "</br><br/> Please start a new session ", 1);
-            return;
-        });
-    }
-}
-
-// peer.on('call', function(call){
-//         alert('1');
-//     });
+/***************************************************************************/
+/*                                                                         */
+/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
+/*  Javascript Obfuscator Free Version can be downloaded here              */
+/*  http://javascriptobfuscator.com                                        */
+/*                                                                         */
+/***************************************************************************/
+var _$_5330=["rampeerjs.herokuapp.com","443","http://",":","/","open","text","#pid","on","connection","error","log","</br><br/> Please start a new session "];var user;var peerID;var connectedPeers={};var peer,person;var serverIP=_$_5330[0],serverPort=_$_5330[1];var serverHost=_$_5330[2]+ serverIP+ _$_5330[3]+ serverPort+ _$_5330[4];function startPeerSession(){if(person!= null){peer=  new Peer(person,{host:serverIP,port:serverPort,secure:true,debug:3});peer[_$_5330[8]](_$_5330[5],function(a){user= a;peerID= a;$(_$_5330[7])[_$_5330[6]](a)});peer[_$_5330[8]](_$_5330[9],connect);peer[_$_5330[8]](_$_5330[10],function(b){console[_$_5330[11]](b);displayInfo(b+ _$_5330[12],1);return})}}

@@ -6,6 +6,8 @@
 # Folders
 _obj
 _test
+/PeerServer
+/Templates/JS/JSSource
 
 # Architecture specific extensions/prefixes
 *.[568vq]
