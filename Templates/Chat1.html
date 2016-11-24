@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Web RTC - 1</title>
+    <title>Live Chat</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
     <meta http-equiv="Content-Language" content="en-us">
@@ -32,7 +32,7 @@
         //var div = $(this).parent().clone();
         $.confirm({
         title: '',
-        content: 'url:https://' + $(location).attr('host') + '/Call',
+        content: 'url:' + $(location).attr('protocol') + '//' + $(location).attr('host') + '/Call',
         onContentReady: function () {
             var self = this;
             var input = this.$content.find('input#callto-id');
@@ -64,11 +64,11 @@
     });
 
     });
-    //alert($(location).attr('host'));
+   
     //alert('http://' + $(location).attr('host') + ':8080/userinput.html'); 
     $.confirm({
         title: '',
-        content: 'url:https://' + $(location).attr('host') + '/UserInput',
+        content: 'url:' + $(location).attr('protocol') + '//' + $(location).attr('host') + '/UserInput',
         buttons: {
             userlogin: {
                 text: 'Login',
@@ -97,7 +97,7 @@
 <body>
     <div class="mainDiv">
         <div id="actions">
-            <button id="close">Close selected connections</button>
+            <!--<button id="close">Close selected connections</button>-->
             <table style="width: auto;">
                 <tr>
                     <td>
@@ -108,7 +108,7 @@
                     </td>
                 </tr>
 
-                <tr style="display:block;">
+                <tr style="display:none;">
                     <td>
                         Connect to a peer
                     </td>
@@ -132,15 +132,15 @@
             </div>
             <div class="clear">
             </div>
-            <!--<div class="UserWidget">
-                
+            <div class="UserWidget">
+
                 <div id="userList">
                     <img class="preloader" src="images/preloader.gif" alt="Loading.." width="22" height="22" /></div>
                 <div class="label">
                     online</div>
                 <div class="arrow">
                 </div>
-            </div>-->
+            </div>
         </div>
     </div>
     <link href="/CSS/main.css" rel="stylesheet" type="text/css">
