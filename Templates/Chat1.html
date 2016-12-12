@@ -17,81 +17,81 @@
 </head>
 
 <script>
-//    $(document).ready(function () {
+   $(document).ready(function () {
 
-//     $('.callRemotePeer').live('click', function (event) {
-//         // var selectedPeerID = $(this).children().last().html();
-//         // $('#rid').val(selectedPeerID);
-//         // $("#connect").trigger("click");
-//         $('img.callRemotePeer').not(this).each(function () {
-//             $('img.callRemotePeer').parent().removeClass('active');
-//         });
+    $('.callRemotePeer').live('click', function (event) {
+        // var selectedPeerID = $(this).children().last().html();
+        // $('#rid').val(selectedPeerID);
+        // $("#connect").trigger("click");
+        $('img.callRemotePeer').not(this).each(function () {
+            $('img.callRemotePeer').parent().removeClass('active');
+        });
 
-//         $(this).parent().addClass('active');
-//         var RemotePeerID = $(this).parent().attr('id');
-//         //var div = $(this).parent().clone();
-//         $.confirm({
-//         title: '',
-//         content: 'url:' + $(location).attr('protocol') + '//' + $(location).attr('host') + '/Call',
-//         onContentReady: function () {
-//             var self = this;
-//             var input = this.$content.find('input#callto-id');
-//             var divOut = this.$content.find('div#connections');
-//             //divOut.html('<div id="'  + RemotePeerID + '" class="active"><div class="messages" style="overflow-y:scroll;height:104px;"></div></br><input type="text" class="messagebox" placeholder="Enter message"></div>');
-//             // alert(div.html());
-//             // alert(divOut.html());
-//             input.val(RemotePeerID);
+        $(this).parent().addClass('active');
+        var RemotePeerID = $(this).parent().attr('id');
+        //var div = $(this).parent().clone();
+        $.confirm({
+        title: '',
+        content: 'url:' + $(location).attr('protocol') + '//' + $(location).attr('host') + '/Call',
+        onContentReady: function () {
+            var self = this;
+            var input = this.$content.find('input#callto-id');
+            var divOut = this.$content.find('div#connections');
+            //divOut.html('<div id="'  + RemotePeerID + '" class="active"><div class="messages" style="overflow-y:scroll;height:104px;"></div></br><input type="text" class="messagebox" placeholder="Enter message"></div>');
+            // alert(div.html());
+            // alert(divOut.html());
+            input.val(RemotePeerID);
             
-//         }
-//         // ,
-//         //  buttons: {
-//         //     endcall: {
-//         //         text: 'End Call',
-//         //         btnClass: 'btn-warning',
-//         //         action: function () {
+        }
+        // ,
+        //  buttons: {
+        //     endcall: {
+        //         text: 'End Call',
+        //         btnClass: 'btn-warning',
+        //         action: function () {
                     
-//         //     //          if (window.existingCall) {
-//         //     //              alert(window.existingCall);
-//         //     //     window.existingCall.close();
-//         //     // }
-//         //            return true;
-//         //         }
-//         //     }
+        //     //          if (window.existingCall) {
+        //     //              alert(window.existingCall);
+        //     //     window.existingCall.close();
+        //     // }
+        //            return true;
+        //         }
+        //     }
 
-//         // }
+        // }
          
        
-//     });
+    });
 
-//     });
+    });
    
-//     //alert('http://' + $(location).attr('host') + ':8080/userinput.html'); 
-//     $.confirm({
-//         title: '',
-//         content: 'url:' + $(location).attr('protocol') + '//' + $(location).attr('host') + '/UserInput',
-//         buttons: {
-//             userlogin: {
-//                 text: 'Login',
-//                 btnClass: 'btn-warning',
-//                 action: function () {
-//                     var input = this.$content.find('input#input-name');
-//                     var errorText = this.$content.find('.text-danger');
-//                     if (input.val() == '') {
-//                         errorText.html('<font color="red"><b>Name field shouldn\'t be empty !!!</b></font>').slideDown(200);
-//                         return false;
-//                     } else {
-//                         person = input.val();
-//                         startPeerSession();
-//                     }
-//                 }
-//             }
+    //alert('http://' + $(location).attr('host') + ':8080/userinput.html'); 
+    $.confirm({
+        title: '',
+        content: 'url:' + $(location).attr('protocol') + '//' + $(location).attr('host') + '/UserInput',
+        buttons: {
+            userlogin: {
+                text: 'Login',
+                btnClass: 'btn-warning',
+                action: function () {
+                    var input = this.$content.find('input#input-name');
+                    var errorText = this.$content.find('.text-danger');
+                    if (input.val() == '') {
+                        errorText.html('<font color="red"><b>Name field shouldn\'t be empty !!!</b></font>').slideDown(200);
+                        return false;
+                    } else {
+                        person = input.val();
+                        startPeerSession();
+                    }
+                }
+            }
 
-//         }
-//     });
+        }
+    });
 
     
-// });
-    var _$_e19e=["click","active","removeClass","parent","img.callRemotePeer","each","not","addClass","id","attr","","url:","protocol","//","host","/Call","input#callto-id","find","$content","div#connections","val","confirm","live",".callRemotePeer","/UserInput","Login","btn-warning","input#input-name",".text-danger","slideDown","<font color=\"red\"><b>Name field shouldn't be empty !!!</b></font>","html","ready"];$(document)[_$_e19e[32]](function(){$(_$_e19e[23])[_$_e19e[22]](_$_e19e[0],function(a){$(_$_e19e[4])[_$_e19e[6]](this)[_$_e19e[5]](function(){$(_$_e19e[4])[_$_e19e[3]]()[_$_e19e[2]](_$_e19e[1])});$(this)[_$_e19e[3]]()[_$_e19e[7]](_$_e19e[1]);var b=$(this)[_$_e19e[3]]()[_$_e19e[9]](_$_e19e[8]);$[_$_e19e[21]]({title:_$_e19e[10],content:_$_e19e[11]+ $(location)[_$_e19e[9]](_$_e19e[12])+ _$_e19e[13]+ $(location)[_$_e19e[9]](_$_e19e[14])+ _$_e19e[15],onContentReady:function(){var e=this;var d=this[_$_e19e[18]][_$_e19e[17]](_$_e19e[16]);var c=this[_$_e19e[18]][_$_e19e[17]](_$_e19e[19]);d[_$_e19e[20]](b)}})});$[_$_e19e[21]]({title:_$_e19e[10],content:_$_e19e[11]+ $(location)[_$_e19e[9]](_$_e19e[12])+ _$_e19e[13]+ $(location)[_$_e19e[9]](_$_e19e[14])+ _$_e19e[24],buttons:{userlogin:{text:_$_e19e[25],btnClass:_$_e19e[26],action:function(){var d=this[_$_e19e[18]][_$_e19e[17]](_$_e19e[27]);var f=this[_$_e19e[18]][_$_e19e[17]](_$_e19e[28]);if(d[_$_e19e[20]]()== _$_e19e[10]){f[_$_e19e[31]](_$_e19e[30])[_$_e19e[29]](200);return false}else {person= d[_$_e19e[20]]();startPeerSession()}}}}})})
+});
+    
 </script>
 
 <body>
@@ -109,10 +109,7 @@
                 </tr>
 
                 <tr style="display:none;">
-                    <td>
-                        Connect to a peer
-                    </td>
-                    <td>
+                   <td>
                         <input type="text" id="rid" placeholder="Remote peer ID">
                         <input class="button" type="button" value="Connect" id="connect">
                     </td>
@@ -144,7 +141,7 @@
         </div>
     </div>
     <link href="/CSS/main.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="/JS/mainconn.js"></script>
+    <script type="text/javascript" src="/JS/peer.js"></script>
     <script type="text/javascript" src="/JS/p2p.js"></script>
     <script type="text/javascript" src="/JS/usersOnline.js"></script>
     <script type="text/javascript" src="/JS/scroll.js"></script>

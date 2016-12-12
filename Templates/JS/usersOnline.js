@@ -1,1 +1,33 @@
-var _$_14c5=["#userList","open","trigger","close","hover",".UserWidget","slideUp","bind","slideDown","ready"];$(document)[_$_14c5[9]](function(){var b=$(_$_14c5[0]);var c;$(_$_14c5[5])[_$_14c5[4]](function(){clearTimeout(c);c= setTimeout(function(){b[_$_14c5[2]](_$_14c5[1])},500)},function(){clearTimeout(c);c= setTimeout(function(){b[_$_14c5[2]](_$_14c5[3])},500)});var a=false;b[_$_14c5[7]](_$_14c5[1],function(){b[_$_14c5[8]](function(){if(!a){executeQuery();a= true}})})[_$_14c5[7]](_$_14c5[3],function(){a= false;b[_$_14c5[6]]()})})
+//Script file showing users list while mouse hover on the Online button
+
+$(document).ready(function() {
+
+    var panel = $('#userList');
+    var timeout;
+
+    $('.UserWidget').hover(
+        function() {
+            clearTimeout(timeout);
+            timeout = setTimeout(function() { panel.trigger('open'); }, 500);
+        },
+        function() {
+            clearTimeout(timeout);
+            timeout = setTimeout(function() { panel.trigger('close'); }, 500);
+        }
+    );
+
+    var loaded = false;
+
+    panel.bind('open', function() {
+        panel.slideDown(function() {
+            if (!loaded) {
+                executeQuery();     // It will fetch and load recent list on the div while hover on on the div
+                loaded = true;
+            }
+        });
+    }).bind('close', function() {
+        loaded = false;
+        panel.slideUp();
+    });
+
+});
